@@ -19,7 +19,7 @@
   <script language="JavaScript" src="planeta.js"></script>
   <img id="apod_img_id" width="250px"/>
 
-  <iframe id="apod_vid_id" type="text/html" width="640" height="385" frameborder="0"></iframe>
+  <iframe id="apod_vid_id" type="text/html" width="640" height="185" frameborder="0"></iframe>
   <p id="copyright"></p>
 
   <h3 id="apod_title"></h3>

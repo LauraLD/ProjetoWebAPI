@@ -1,4 +1,4 @@
-var url = "https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-08&api_key=DEMO_KEY";
+var url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY";
 
 
 $.ajax({
@@ -19,9 +19,5 @@ $.ajax({
     $("#apod_vid_id").css("display", "none");
     $("#apod_img_id").attr("src", result.url);
   }
-  $("#reqObject").text(url);
-  $("#returnObject").text(JSON.stringify(result, null, 4));
-  $("#apod_explaination").text(result.explanation);
-  $("#apod_title").text(result.title);
 }
 });

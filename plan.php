@@ -13,10 +13,12 @@
 </head>
 <body>
   <?php include('header.php') ?>
-  <div class="bd-pageheader bg-primary">
+
     <div class="container">
 
-  <script language="JavaScript" src="sat.js"></script>
+      <img id="terra" src="https://images-assets.nasa.gov/image/PIA18033/PIA18033~medium.jpg" alt="logo" />
+
+
   <img id="apod_img_id" width="250px"/>
 
   <iframe id="apod_vid_id" type="text/html" width="640" height="385" frameborder="0"></iframe>
@@ -25,10 +27,8 @@
   <h3 id="apod_title"></h3>
   <p id="apod_explaination"></p>
   <br/>
-  <p>
-    <a href="sat.php" class="btn btn-default"><i class="icon-user icon-white"></i>Planetário</a>
-  </p>
-</div>
+
+
 </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>

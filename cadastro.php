@@ -1,25 +1,24 @@
 <?php
 
   if(isset($_POST['cadastrar'])) {
-    include ('classes/Conexao.class.php');
-    include ('classes/UsuarioDAO.class.php');
+    include ('Classes/Conexao.class.php');
+    include ('Classes/UsuarioDAO.class.php');
 
     $cadastrar = new UsuarioDAO();
 
-    $login = trim(strip_tags($_POST['login'])); // atribui login à variavel, com funções contra sql inject
-    $senha = trim(strip_tags($_POST['senha'])); // atribui login à variavel, com funções contra sql inject
-    $rep_senha = trim(strip_tags($_POST['rep_senha'])); // atribui login à variavel, com funções contra sql inject
+    $login = trim(strip_tags($_POST['login']));
+    $senha = trim(strip_tags($_POST['senha']));
+    $rep_senha = trim(strip_tags($_POST['rep_senha']));
 
-    // confere se as senhas são iguais
     if($senha === $rep_senha) {
       $consulta = $cadastrar->unico($login);
-      // caso o login escolhido já exista no banco retorna erro
+
       if($consulta == false) {
         header('location:cadastro.php?repetido=senha');
-      // caso não haja login parecido, inclui métoro de inserção de dados no banco de dados
+
       } else {
         $insere = $cadastrar->cadastra($login,$senha);
-        // caso o usuario seja cadastrado, exibir mensagem de sucesso
+
         if($insere == true) {
           header('location:cadastro.php?success=cadastrado');
         }
@@ -83,21 +82,18 @@
         <input type="password" class="form-control" id="rep_senha" name="rep_senha" required>
       </div>
       <button type="submit" class="btn btn-primary" name="cadastrar">Cadastrar</button>
-
+      <a href="index.php" class="btn btn-primary"><i class="icon-user icon-white"></i>Voltar</a>
     </form>
-
-    <hr>
-    <a href="index.php">Voltar</a>
-
+  </hr>
   </div>
-
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script>
     setTimeout(function() {
       $('.alert').fadeOut();
-    }, 3000);
+    }, 4000);
 
   </script>
 </body>

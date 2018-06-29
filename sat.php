@@ -12,7 +12,8 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <?php include('header.php') ?>
+  <?php include('header.php')  ?>
+
   <div class="bd-pageheader bg-primary">
     <div class="container">
 
@@ -26,7 +27,7 @@
   <p id="apod_explaination"></p>
   <br/>
   <p>
-    <a href="sat.php" class="btn btn-default"><i class="icon-user icon-white"></i>Planetário</a>
+    <a href="plan.php" class="btn btn-default"><i class="icon-user icon-white"></i>Planeta Terra</a>
   </p>
 </div>
 </div>

@@ -1,7 +1,7 @@
 <?php
 
-  include ('classes/Conexao.class.php');
-  include ('classes/UsuarioDAO.class.php');
+  include ('Classes/Conexao.class.php');
+  include ('Classes/UsuarioDAO.class.php');
 
   $usuario = new UsuarioDAO();
 

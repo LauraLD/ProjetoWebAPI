@@ -1,11 +1,9 @@
 <?php
 
-	include ('classes/Conexao.class.php');
+	include ('Classes/Conexao.class.php');
 
 	$usuario = new Conexao();
-
 	$sql = 'select * from usuario order by loginUsuario';
-
 	$resultado = mysqli_query($usuario->getCon(), $sql);
 ?>
 
@@ -23,10 +21,12 @@
 </head>
 <body>
 	<?php include('header.php') ?>
- <div class="container">
-
-	 <h2>Usuários</h2>
-
+	<div class="bd-pageheader bg-primary">
+ 		<div class="container">
+			<h2>Usuários</h2>
+		</div>
+	</div>
+ <div class="container" style="padding-top: 20px">
 	 <?php
 			 while($campos = mysqli_fetch_assoc($resultado)){
 
@@ -35,9 +35,6 @@
 		 	}
 		 	mysql_close($usuario->con);
 		?>
-
-
-
  </div>
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>

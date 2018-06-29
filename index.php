@@ -1,8 +1,8 @@
 <?php
 
   if($_POST) {
-    include ('classes/Conexao.class.php');
-    include ('classes/UsuarioDAO.class.php');
+    include ('Classes/Conexao.class.php');
+    include ('Classes/UsuarioDAO.class.php');
 
     $usuario = new UsuarioDAO();
 
@@ -70,19 +70,14 @@
 
     </form>
 
-
-
-
-
     </div>
-
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script>
       setTimeout(function() {
         $('.alert').fadeOut();
-      }, 3000);
-
+      }, 4000);
     </script>
    </body>
 

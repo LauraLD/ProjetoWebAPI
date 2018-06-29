@@ -16,11 +16,7 @@
 
     <div class="container">
 
-    <p>
-      <a href="fin.php" class="btn btn-primary"><i class="icon-user icon-white"></i>Lista de asteróides</a>
-    </p>
-
-      <img id="terra" src="https://images-assets.nasa.gov/image/PIA18033/PIA18033~medium.jpg" alt="logo" />
+      <script language="JavaScript" src="plan.js"></script>
 
 
   <img id="apod_img_id" width="250px"/>
